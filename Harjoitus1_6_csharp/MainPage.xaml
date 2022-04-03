@@ -8,7 +8,141 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <RelativePanel>
 
-    </Grid>
+        <!--Top text-->
+        <Border
+            Height="100"
+            Width="1500"
+            Background="#197d73"
+            Name="topText">
+            <TextBlock
+                FontSize="70"
+                FontWeight="Bold"
+                HorizontalAlignment="Center">
+                Tervetuloa!
+            </TextBlock>
+        </Border>
+
+        <!--Left panel-->
+        <Border
+            Background="#feffc7"
+            Height="800"
+            Width="750"
+            RelativePanel.AlignLeftWithPanel="True"
+            RelativePanel.AlignVerticalCenterWithPanel="True"
+            Name="leftPanel">
+        </Border>
+
+        <!--Left header-->
+        <TextBlock
+                FontSize="50"
+                FontWeight="Bold"
+                Margin="20, 20, 0, 0"
+                Name="header1"
+                Foreground="Black"
+                RelativePanel.Below="topText">
+                Yksinkertainen laskin
+        </TextBlock>
+
+        <!--First textbox-->
+        <Border
+            Name="textBox1"
+            RelativePanel.Below="header1"
+            Margin="20, 40, 0, 0"
+            Background="Gray">
+            <TextBox
+                Width="100"
+                Height="30"
+                Background="White"
+                Margin="1">
+            </TextBox>
+        </Border>
+
+        <!--Second textbox-->
+        <Border
+            Name="textBox2"
+            RelativePanel.Below="textBox1"
+            Margin="20, 40, 0, 0"
+            Background="gray">
+            <TextBox
+                Width="100"
+                Height="30"
+                Background="White"
+                Margin="1">
+            </TextBox>
+        </Border>
+
+        <!--Summing button-->
+        <Border 
+            Name="button1"
+            RelativePanel.Below="textBox2"
+            Margin="20, 50, 0, 0">
+            <Button
+                Background="LightGray"
+                Foreground="Black">
+                Summaa!
+            </Button> 
+        </Border>
+
+        <!--Textblock to print the sum-->
+        <Border
+            RelativePanel.Below="button1"
+            Margin="20, 50, 0, 0"
+            Background="#197d73">
+            <TextBlock
+                Width="100"
+                Height="30">
+            </TextBlock>
+        </Border>
+
+        <!--Right panel-->
+        <Border
+            Background="White"
+            Height="800"
+            Width="750"
+            RelativePanel.AlignRightWithPanel="True"
+            RelativePanel.AlignVerticalCenterWithPanel="True"
+            Name="rightPanel">
+        </Border>
+
+        <!--Right header-->
+        <TextBlock
+                FontSize="50"
+                FontWeight="Bold"
+                Margin="20, 20, 0, 0"
+                Name="header2"
+                Foreground="Black"
+                RelativePanel.Below="topText"
+                RelativePanel.RightOf="leftPanel">
+                Käyttöohjeet
+        </TextBlock>
+
+        <Border
+            RelativePanel.Below="header2"
+            RelativePanel.RightOf="leftPanel"
+            Width="750">
+            <TextBlock
+                Foreground="Black"
+                Margin="30, 40, 30, 0"
+                FontSize="20">
+                Syötä tekstilaatikoihin haluamasi KOKONAISLUVUT, ja klikkaa sen jälkeen <LineBreak/> laatikoiden alla olevaa painiketta. Ohjelma laskee summan alimmaisena <LineBreak/> olevaan turkoosinväriseen laatikkoon.
+            </TextBlock>
+        </Border>
+
+        <!--Bottom text-->
+        <Border
+            Height="100"
+            Width="1500"
+            Background="#197d73"
+            RelativePanel.AlignBottomWithPanel="True">
+            <TextBlock
+                FontSize="70"
+                FontWeight="Bold"
+                HorizontalAlignment="Center">
+                Copyright 2022
+            </TextBlock>
+        </Border>
+
+    </RelativePanel>
 </Page>
